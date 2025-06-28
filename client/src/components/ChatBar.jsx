@@ -9,7 +9,7 @@ const ChatBar = ({setMeals, setIsLoading}) => {
   const handleSubmit = async() => {
       setIsLoading(true)
         try {
-            const res = await axios.post("http://localhost:8080/api/meals", {ingredients: items})
+            const res = await axios.post("https://food-fill.onrender.com/api/meals", {ingredients: items})
             setMeals(res.data)
             localStorage.setItem('meals', JSON.stringify(res.data))
         } catch (error) {

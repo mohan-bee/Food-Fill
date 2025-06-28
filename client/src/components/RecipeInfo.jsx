@@ -40,8 +40,8 @@ const RecipeInfo = ({meals, setIsLoading}) => {
   useEffect(() => {
     const fetchSteps = async () => {
     try {
-        const res = await axios.post('http://localhost:8080/api/steps', {recipe: meals[id-1].name})
-        const ingredients = await axios.post('http://localhost:8080/api/ingredients', {steps: res.data})
+        const res = await axios.post('https://food-fill.onrender.com/api/steps', {recipe: meals[id-1].name})
+        const ingredients = await axios.post('https://food-fill.onrender.com/api/ingredients', {steps: res.data})
         setRecipeSteps(res.data)
         setIngredients(ingredients.data)
     } catch (error) {

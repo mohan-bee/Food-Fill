@@ -3,7 +3,9 @@ const app = express()
 require('dotenv').config()
 const cors = require('cors')
 app.use(express.json())
-app.use(cors())
+app.use(cors({
+    origin: "https://food-fill.vercel.app"
+}))
 
 const getRecipies = require('./ai/getGeminiRecipes');
 const getRecipeStepPrompt = require('./ai/getRecipeSteps')

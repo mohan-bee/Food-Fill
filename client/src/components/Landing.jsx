@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import introMp4 from '../assets/introducing.mp4'; // Ensure correct relative path
+import introMp4 from '/introducing.mp4'; // Ensure correct relative path
 import { useNavigate } from 'react-router-dom';
 
 const Landing = () => {
